@@ -1,0 +1,97 @@
+package com.dxc1.model;
+
+
+import jakarta.persistence.Table;
+
+
+@Table(name="orderbybuyer")
+public class Order {
+
+	
+	private int orderid;
+	private int productid;
+	private String productName;
+	private String buyername;
+	private long buyermobile;
+	private String buyeraddress;
+	//private String paymentmode;
+	
+	public Order() {
+		super();
+	}
+
+	public Order(int orderid, int productid, String productName, String buyername, long buyermobile,
+			String buyeraddress) {
+		super();
+		this.orderid = orderid;
+		this.productid = productid;
+		this.productName = productName;
+		this.buyername = buyername;
+		this.buyermobile = buyermobile;
+		this.buyeraddress = buyeraddress;
+		//this.paymentmode = paymentmode;
+	}
+
+	public int getOrderid() {
+		return orderid;
+	}
+
+	public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
+
+	public int getProductid() {
+		return productid;
+	}
+
+	public void setProductid(int productid) {
+		this.productid = productid;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public String getBuyername() {
+		return buyername;
+	}
+
+	public void setBuyername(String buyername) {
+		this.buyername = buyername;
+	}
+
+	public long getBuyermobile() {
+		return buyermobile;
+	}
+
+	public void setBuyermobile(long buyermobile) {
+		this.buyermobile = buyermobile;
+	}
+
+	public String getBuyeraddress() {
+		return buyeraddress;
+	}
+
+	public void setBuyeraddress(String buyeraddress) {
+		this.buyeraddress = buyeraddress;
+	}
+
+//	public String getPaymentmode() {
+//		return paymentmode;
+//	}
+//
+//	public void setPaymentmode(String paymentmode) {
+//		this.paymentmode = paymentmode;
+//	}
+
+	@Override
+	public String toString() {
+		return "Order [orderid=" + orderid + ", productid=" + productid + ", productName=" + productName
+				+ ", buyername=" + buyername + ", buyermobile=" + buyermobile + ", buyeraddress=" + buyeraddress
+				+ ", paymentmode="+ "]";
+	}
+}

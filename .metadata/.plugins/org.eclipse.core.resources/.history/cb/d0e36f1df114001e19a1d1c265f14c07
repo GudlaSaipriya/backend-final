@@ -1,0 +1,51 @@
+spring:
+
+  application:
+
+    name: api-gateway
+
+  cloud:
+
+    gateway:
+
+      routes:
+
+      - id: AdminController
+
+        uri: lb://AdminController
+
+        predicates:
+
+        - Path=/pro/**
+
+      - id: Buyer
+
+        uri: lb://Buyer
+
+        predicates:
+
+        - Path=/buy/**
+
+      - id: Customer-Rating
+
+        uri: lb://Customer-Rating
+
+        predicates:
+
+        - Path=/user/reviews/**
+
+      - id: login-page
+
+        uri: lb://login-page
+
+        predicates:
+
+        - Path=/users/**
+        
+      - id: Payments
+
+        uri: lb://Payments
+
+        predicates:
+
+        - Path=/pay/**

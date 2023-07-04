@@ -1,0 +1,14 @@
+package com.dxc1.service;
+
+import java.util.List;
+
+import com.dxc1.execption.OrderException;
+import com.dxc1.model.Order;
+
+public interface OrderService {
+		Order order(Order order) throws OrderException;
+		
+		List<Order> getAllOrders();
+	
+
+}

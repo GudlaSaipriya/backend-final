@@ -1,0 +1,150 @@
+package com.dxc1.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="orderbybuyer")
+public class Orders {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int orderid;
+	private int productid;
+	private String productname;
+	private String firstName ;
+	private String lastName;
+	private long mobileNumber;
+	private long alternateMobileNumber;
+	private String shippingAddress;
+	
+   public Orders() {
+		super();
+	}
+
+   public Orders(int orderid, int productid, String productname, String firstName, String lastName, long mobileNumber,
+			long alternateMobileNumber, String shippingAddress) {
+		super();
+		this.orderid = orderid;
+		this.productid = productid;
+		this.productname = productname;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mobileNumber = mobileNumber;
+		this.alternateMobileNumber = alternateMobileNumber;
+		this.shippingAddress = shippingAddress;
+	}
+
+
+   public int getOrderid() {
+		return orderid;
+	}
+
+
+   public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
+
+
+   public int getProductid() {
+		return productid;
+	}
+
+
+   public void setProductid(int productid) {
+		this.productid = productid;
+	}
+
+
+   public String getProductname() {
+		return productname;
+	}
+
+
+   public void setProductname(String productName) {
+		this.productname = productName;
+	}
+
+
+   public String getFirstName() {
+		return firstName;
+	}
+
+
+   public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+   	public String getLastName() {
+		return lastName;
+	}
+
+
+   	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+   	public long getMobileNumber() {
+		return mobileNumber;
+	}
+
+
+   	public void setMobileNumber(long mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
+
+
+
+
+
+	public long getAlternateMobileNumber() {
+		return alternateMobileNumber;
+	}
+
+
+
+
+
+
+	public void setAlternateMobileNumber(long alternateMobileNumber) {
+		this.alternateMobileNumber = alternateMobileNumber;
+	}
+
+
+
+
+
+
+	public String getShippingAddress() {
+		return shippingAddress;
+	}
+
+
+
+
+
+
+	public void setShippingAddress(String shippingAddress) {
+		this.shippingAddress = shippingAddress;
+	}
+
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Orders [orderid=" + orderid + ", productid=" + productid + ", productname=" + productname
+				+ ", firstName=" + firstName + ", lastName=" + lastName + ", mobileNumber=" + mobileNumber
+				+ ", alternateMobileNumber=" + alternateMobileNumber + ", shippingAddress=" + shippingAddress + "]";
+	}
+
+	
+}

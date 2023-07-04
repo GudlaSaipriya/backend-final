@@ -1,0 +1,93 @@
+package com.dxc1.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import java.util.ArrayList;
+import com.dxc1.DAO.OrdersDao;
+import com.dxc1.execption.OrderException;
+import com.dxc1.model.Order;
+import static org.mockito.Mockito.*;
+
+@SpringBootTest
+public class OrderServiceImpTest {
+	
+	@MockBean
+	   private OrdersDao ordersDAO;//repository class
+	@Autowired
+	private OrderService orderservice;
+	
+	@Test
+	public void saveCreateTest() throws OrderException {
+		
+		//when(ordersDAO.save(order)).thenReturn(order);
+		//when(ordersDAO.save(any(Order.class))).thenReturn(new Order);
+//		when(ordersDAO.save(any(Order.class))).thenReturn(new Order());
+//		Order order = new Order();
+//		Order createdOrder=orderservice.order(order);
+//		assertNotNull(createdOrder);
+//		verify(ordersDAO,times(1)).save(order);
+		
+	}
+	
+//	@Test
+//	public void getAll(){
+//		//when(ordersDAO.findAll()).thenReturn(Stream
+//			//	.of(new Order(1,1,"toy","sai","9087543","baratam","cash")).collect(Collectors.toList()));
+//		Order order1 = new Order();
+//		order1.setOrderid(1);
+//		Order order2 = new Order();
+//		order2.setOrderid(3);
+//		when(ordersDAO.findAll()).thenReturn(Arrays.asList(order1,order2));
+//		//call getAllOrders from service class
+//		List<Order> orders=orderservice.getAllOrders();
+//		//assert result
+//		assertEquals(2,orders.size());
+//		assertEquals( order1.getOrderid(),orders.get(2).getOrderid());
+//		assertEquals( order2.getOrderid(),orders.get(3).getOrderid());
+//		verify(ordersDAO,times(1)).findAll();
+//	}
+	
+//	@Test
+//	public void getAllTest()
+//	{
+//		List<Order> list = new ArrayList<Order>();
+//		Order order1 = new Order(1,1,"toy","sai",34567,"eastern");
+//		Order order2 = new Order(2,2, "Alex", "kamala", 3456790,"baratam street");
+//		Order order3 = new Order(3,3, "Steve", "Watson", 983456790,"bazar road");
+//
+//		list.add(order1);
+//		list.add(order2);
+//		list.add(order3);
+//
+//		when(ordersDAO.findAll()).thenReturn(list);
+//
+//		//test
+//		List<Order> orderList = orderservice.getAllOrders();
+//
+//		assertEquals(3, orderList.size());
+//		verify(ordersDAO, times(1)).findAll();
+//	}
+//	
+//	@Test
+//	public void getOrderbyProduct() {
+//		int productid =1;
+//		when(ordersDAO.findById(productid))
+//		.thenReturn(Stream.of(new Order(1,1,"dress","sai",34567,"eastern")).collect(Collectors.toList()));
+//		assertEquals(1,orderservice.getAllOrderByProductId(productid).size());
+//	}
+	
+//	@Test
+//	public void getOrderbyProduct() {
+//		String productName ="toy";
+//		when(ordersDAO.findByProductName(productName))
+//		.thenReturn(Stream.of(new Order(1,1,"dress","sai",34567,"eastern")).collect(Collectors.toList()));
+//		assertEquals(1,orderservice.getAllOrdersByProduct(productName).size());
+//	}
+}

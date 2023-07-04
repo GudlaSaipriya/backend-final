@@ -1,0 +1,5 @@
+spring.application.name=login-page
+eureka.client.service-url.default-zone=http:localhost:8761/eserver
+
+eureka.instance.hostname=localhost
+
